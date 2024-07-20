@@ -272,8 +272,6 @@ if [ "$FS_HAS_OOBE" = "false" ]; then
 						$chroot $DESTDIR $FS_INST_PKG $FS_PKGS_CD_UI_PHOSH
 						$chroot $DESTDIR rc-update enable display-manager default
 						$chroot $DESTDIR sed -i 's/xdm/sddm/' $DESTDIR/etc/conf.d/display-manager
-					fi
-
 					else
 					    $chroot $DESTDIR systemctl enable phosh
 					fi
