@@ -26,4 +26,5 @@ $chroot $DESTDIR $qemu /usr/bin/pacman -Syu --noconfirm networkmanager
 $chroot $DESTDIR $qemu systemctl start NetworkManager.service
 $chroot $DESTDIR $qemu systemctl enable NetworkManager.service
 sed -i 's/\#en_US.UTF-8/en_US.UTF-8/' $DESTDIR/etc/locale.gen
+echo "LANG=en_US.UTF-8" > $DESTDIR/etc/locale.conf
 $chroot $DESTDIR $qemu locale-gen
