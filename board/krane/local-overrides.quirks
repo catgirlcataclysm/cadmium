@@ -1,4 +1,14 @@
-[Google Chromebook Duet]
+[Google Chromebook Krane Stylus Digitizer]
+MatchUdevType=tablet
+MatchDeviceTree=*krane*
+MatchBus=i2c
+ModelChromebook=1
+AttrPressureRange=1100:1000
+
+[Google Chromebook Krane Trackpad]
 MatchUdevType=touchpad
+MatchName=Google Inc. Hammer
+MatchBus=usb
+MatchDeviceTree=*krane*
 ModelChromebook=1
 AttrPressureRange=20:10
